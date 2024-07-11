@@ -27,8 +27,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public void addUser(User user) {
+    public User addUser(User user) {
         userRepository.save(user);
+        return user;
     }
 
     @Override
@@ -37,8 +38,6 @@ public class UserServiceImpl implements UserService {
         User updatedUser = userRepository.getById(id);
         if (updatedUser != null) {
             updatedUser.setName(user.getUsername());
-            updatedUser.setEmail(user.getEmail());
-            updatedUser.setAge(user.getAge());
             updatedUser.setPassword(user.getPassword());
             updatedUser.setRoleSet(user.getRoleSet());
             userRepository.save(updatedUser);

@@ -100,20 +100,6 @@
                 </td>
             </tr>
             <tr>
-                <th>Mail:</th>
-                <td>
-                    <input type="text" th:field="*{email}"/>
-                    <span class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">email Error</span>
-                </td>
-            </tr>
-            <tr>
-                <th>Age:</th>
-                <td>
-                    <input type="text" th:field="*{age}"/>
-                    <span class="error" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">age Error</span>
-                </td>
-            </tr>
-            <tr>
                 <th>Password:</th>
                 <td>
                     <input type="text" th:field="*{password}"/>
